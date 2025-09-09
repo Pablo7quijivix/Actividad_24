@@ -5,6 +5,10 @@ def factorial(num):
         return num* factorial(num-1)
 
 def SumaNumerosNaturales(n):
+    if n <0: # condicional del caso base
+        return 1
+    else:
+        return n + SumaNumerosNaturales(n+1)
 
 
 
@@ -24,12 +28,14 @@ while True:
 
     match op:
         case "1":
-            print(f"----------Factorial de un numero------------")
+            print(f"\n----------Factorial de un numero------------")
             num = int(input(f"Ingrese un numero para calcular su factorial: "))
             print(f"El factorial de {num} es igual: {factorial(num)}")
 
         case "2":
-            print(f"esperando jaja x2")
+            print(f"\n---------Suma de N numeros naturales----------")
+            n=int(input(f"Ingrese un numero positivo para suma desde '1' hasta 'n' recursivmente: "))
+            print(f"La sumatoria del numero natural: {n}, es igual a: {SumaNumerosNaturales(n)}")
 
         case "3":
             print(f"esperando jaja x3")
